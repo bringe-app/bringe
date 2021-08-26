@@ -10,39 +10,68 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  int _selectedIndex = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      appBar: buildAppBar(),
       body: Center(
         child:  Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-             const Text(
-              'You have pushed the button this many times:',
-            ),
-             Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.bodyText1,
+             Container(
+              width: 280.00,
+              height: 280.00,
+              decoration: const BoxDecoration(
+                color: Colors.grey,
+                image: DecorationImage(
+                  image: NetworkImage("https://i.pinimg.com/474x/21/fd/b6/21fdb6c149532f2b588ef892f2648f35.jpg"),
+                  fit: BoxFit.none,
+                ),
+              ),
             ),
           ],
         ),
       ),
-      floatingActionButton:  FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child:  const Icon(Icons.add),
-      ),
+      bottomNavigationBar: buildBottomNavigationBar(),
+    );
+  }
+
+  BottomNavigationBar buildBottomNavigationBar() {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      currentIndex: _selectedIndex,
+      onTap: (value) {
+        setState(() {
+          _selectedIndex = value;
+        });
+      },
+      items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.messenger), label: "Chats"),
+        BottomNavigationBarItem(icon: Icon(Icons.people), label: "People"),
+        BottomNavigationBarItem(icon: Icon(Icons.call), label: "Calls"),
+        BottomNavigationBarItem(
+          icon: CircleAvatar(
+            radius: 14,
+            backgroundImage: NetworkImage("https://picsum.photos/250?image=9"),
+          ),
+          label: "Profile",
+        ),
+      ],
+    );
+  }
+
+  AppBar buildAppBar() {
+    return AppBar(
+      automaticallyImplyLeading: false,
+      title: const Text("Chats"),
+      actions: [
+        IconButton(
+          icon: const Icon(Icons.search),
+          onPressed: () {},
+        ),
+      ],
     );
   }
 }
