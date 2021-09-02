@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, this.title=''}) : super(key: key);
+  const MyHomePage({Key? key, this.title = ''}) : super(key: key);
 
   final String title;
 
@@ -17,16 +17,17 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: buildAppBar(),
       body: Center(
-        child:  Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-             Container(
+            Container(
               width: 280.00,
               height: 280.00,
               decoration: const BoxDecoration(
                 color: Colors.grey,
                 image: DecorationImage(
-                  image: NetworkImage("https://i.pinimg.com/474x/21/fd/b6/21fdb6c149532f2b588ef892f2648f35.jpg"),
+                  image: NetworkImage(
+                      "https://i.pinimg.com/474x/21/fd/b6/21fdb6c149532f2b588ef892f2648f35.jpg"),
                   fit: BoxFit.none,
                 ),
               ),

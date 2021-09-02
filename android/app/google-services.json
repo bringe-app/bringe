@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "498221981906",
+    "project_id": "bringe-app",
+    "storage_bucket": "bringe-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498221981906:android:784afb20f46bd25ccfcd0b",
+        "android_client_info": {
+          "package_name": "com.bringe.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498221981906-upha7vu5gpr2mdn2nvht01l80ghdi6vh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLp-w1fABUTBG02Db_gGwzRhDUHYt2-oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498221981906-upha7vu5gpr2mdn2nvht01l80ghdi6vh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "498221981906-kfa0sleksq6mpgo0rf4mvm3r5q8inbtb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bringe.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
